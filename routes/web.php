@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleweare(['auth','verified'])->name('dashboard');
+Route::get('/admin', [DashboardController::class, 'index'])->middleware(['auth','verified'])->name('admin.dashboard');
 
 
 

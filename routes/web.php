@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ Route::get('/admin', [DashboardController::class, 'index'])->middleware(['auth',
 
 Route::middleware(['auth','verified'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('projects',ProjectController::class);
 });
 
 require __DIR__.'/auth.php';

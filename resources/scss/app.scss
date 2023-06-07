@@ -81,6 +81,10 @@ img{
     
 
             //adminDashboard-projects
+            .project-link{
+                text-decoration: none;
+                color: inherit;
+            }
             .project-card{
                 height: 120px;
                 max-width: 1000px;

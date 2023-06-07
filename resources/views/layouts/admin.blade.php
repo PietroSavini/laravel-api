@@ -71,7 +71,7 @@
             <div class="dashboard-content d-flex">
                 <div class="sidebar">
                     <ul class="sidebar-nav">
-                        <a href="" class="nav-link">
+                        <a href="{{route('admin.projects.index')}}" class="nav-link">
                             <li class="sidebar-link">Projects</li>
                         </a>
                     </ul>

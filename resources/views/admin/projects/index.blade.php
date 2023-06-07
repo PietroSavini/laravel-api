@@ -1,10 +1,12 @@
 @extends('layouts.admin')
 
 @section('content')
+<div class="text-center py-3">
+    <button class="btn btn-primary">Add new post</button>
+</div>
 <div class="ms_container">
-    <h2 class="mb-5">Progetti:</h2>
     @foreach ($projects as $project)
-     <a class="project-link"href="">
+     <a class="project-link" href="">
          <div class="project-card mb-4  d-flex">
              <div class="type">
                  @if (strpos($project->title, 'HTML/CSS') !== false)

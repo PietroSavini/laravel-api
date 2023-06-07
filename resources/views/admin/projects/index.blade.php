@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="text-center py-3">
-    <button class="btn btn-primary">Add new post</button>
+    <button class="btn btn-primary">Add new project</button>
 </div>
 <div class="ms_container">
     @foreach ($projects as $project)

@@ -9,7 +9,8 @@
         <form action="{{route('admin.projects.update',$project)}}" method="POST">
             @method('PUT')
             @csrf
-            <h3>modifica del project : {{$project->title}}</h3>
+            <h3>modifica del project :</h3>
+            <h4 class="mb-3"> {{$project->title}}</h4>
             <div class="form-group">
                 <label class="d-inline-block" for="img">nuovo titolo:</label>
                 <input value="{{ old('title') }}" type="text" class="form-control  @error('title')is-invalid @enderror" 

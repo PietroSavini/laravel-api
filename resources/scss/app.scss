@@ -149,6 +149,26 @@ img{
             }
            
         }
+
+        //project-edit
+        .edit{
+            .form-group{
+                display: flex;
+                margin-bottom: 1rem;
+                flex-wrap: wrap;
+                align-items: center;
+                label{
+                    width: 20%;
+                }
+                input{
+                    width: 80%;
+                }
+                textarea{
+                    width: 80%;
+                }
+                
+            }
+        }
         
     }   
 }

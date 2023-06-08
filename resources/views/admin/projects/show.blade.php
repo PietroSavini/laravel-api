@@ -14,7 +14,7 @@
         <hr>
         <div class="actions">
             <a href="{{route('admin.projects.index')}}" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i></a>
-            <a href="" class="btn btn-warning m-2"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a href="{{route('admin.projects.edit',$project)}}" class="btn btn-warning m-2"><i class="fa-solid fa-pen-to-square"></i></a>
             <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
         </div>
     </div>

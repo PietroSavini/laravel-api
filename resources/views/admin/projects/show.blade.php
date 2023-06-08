@@ -1,3 +1,4 @@
+@include('admin.partials.modal')
 @extends('layouts.admin')
 
 @section('content')
@@ -15,7 +16,12 @@
         <div class="actions">
             <a href="{{route('admin.projects.index')}}" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i></a>
             <a href="{{route('admin.projects.edit',$project)}}" class="btn btn-warning m-2"><i class="fa-solid fa-pen-to-square"></i></a>
-            <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+            <form class="d-inline-block" action="{{route('admin.projects.destroy', $project)}}" method="POST">
+                @method('DELETE')
+                @csrf
+                <button type="submit" projects-title="{{ $project->title }}"
+                class="btn btn-danger ms_delete_btn"><i class="fa-solid fa-trash"></i></button>
+            </form>
         </div>
     </div>
 

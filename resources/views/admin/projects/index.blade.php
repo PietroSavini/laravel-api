@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="text-center py-3">
-    <button class="btn btn-primary">Add new project</button>
+    <a href="{{route('admin.projects.create')}}" class="btn btn-primary">Add new project</a>
 </div>
 <div class="ms_container">
     @foreach ($projects as $project)

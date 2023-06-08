@@ -121,5 +121,33 @@ img{
                 }
             }
         }
-    }
+
+        //Project-show
+        .show{
+            background-color:#000000;
+            background-image: linear-gradient(30deg, #1F212E 12%, transparent 12.5%, transparent 87%, #1F212E 87.5%, #1F212E),
+            linear-gradient(150deg, #1F212E 12%, transparent 12.5%, transparent 87%, #1F212E 87.5%, #1F212E),
+            linear-gradient(30deg, #1F212E 12%, transparent 12.5%, transparent 87%, #1F212E 87.5%, #1F212E),
+            linear-gradient(150deg, #1F212E 12%, transparent 12.5%, transparent 87%, #1F212E 87.5%, #1F212E),
+            linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),
+            linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+            background-size:80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+            height: 100%;
+            padding: 2rem 0;
+            display: flex;
+            align-items: center;
+            .content-show{
+                background-color: #1F212E;
+                border-radius: 15px;
+                margin: 0 auto;
+            }
+
+            .actions i{
+                color:black;
+            }
+           
+        }
+        
+    }   
 }

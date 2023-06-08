@@ -6,7 +6,7 @@
 </div>
 <div class="ms_container">
     @foreach ($projects as $project)
-     <a class="project-link" href="">
+     <a class="project-link" href="{{route('admin.projects.show', $project)}}">
          <div class="project-card mb-4  d-flex">
              <div class="type">
                  @if (strpos($project->title, 'HTML/CSS') !== false)

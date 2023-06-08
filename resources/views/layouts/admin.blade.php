@@ -14,7 +14,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    {{-- fontawesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
 </head>
@@ -71,9 +72,8 @@
             <div class="dashboard-content d-flex">
                 <div class="sidebar">
                     <ul class="sidebar-nav">
-                        <a href="{{route('admin.projects.index')}}" class="nav-link">
-                            <li class="sidebar-link">Projects</li>
-                        </a>
+                        <li class="sidebar-link"><a href="{{route('admin.dashboard')}}" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li class="sidebar-link"> <a href="{{route('admin.projects.index')}}" class="nav-link"><i class="fa-solid fa-bars-progress"></i> Projects</a></li>
                     </ul>
                 </div>
                 <main class="">

@@ -44,7 +44,7 @@ class ProjectController extends Controller
             'title' => 'required|min:5|max:100',
             'slug' => 'nullable',
             'description' => 'nullable',
-            'type_id' => 'nullable'
+            'type_id' => 'nullable|exists:types,id'
         ]);
         $data['slug'] = Str::slug($data['title'], '-');
         $project = new Project();
@@ -72,7 +72,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+        $types = type::all();
+        return view('admin.projects.edit', compact('project','types'));
     }
 
     /**
@@ -87,7 +88,8 @@ class ProjectController extends Controller
         $data = $request->validate([
             'title' => 'required|min:5|max:100',
             'slug' => 'nullable',
-            'description' => 'nullable'
+            'description' => 'nullable',
+            'type_id' => 'nullable|exists:types,id'
         ]);
         $data['slug'] = Str::slug($data['title'], '-');
         $project->update($data);

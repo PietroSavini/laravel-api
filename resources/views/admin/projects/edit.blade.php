@@ -13,7 +13,7 @@
             <h4 class="mb-3"> {{$project->title}}</h4>
             <div class="form-group">
                 <label class="d-inline-block" for="img">nuovo titolo:</label>
-                <input value="{{ old('title') }}" type="text" class="form-control  @error('title')is-invalid @enderror" 
+                <input value="{{ old('title')}}" type="text" class="form-control  @error('title')is-invalid @enderror" 
                     id="img" name="title">
                 
                     @error('title')
@@ -27,7 +27,17 @@
                 <label  for="description" class="d-block">descrizione:</label>
                 <textarea value="{{old('description')}}" name="description" id="description"  rows="3"></textarea>
             </div>
-    
+            
+            <div class="form-group">
+                <label for="type" >linguaggio di programmazione:</label>
+                <select class="form-select" name="type_id" id="type" >
+                    <option value="">seleziona un linguaggio</option>
+                    @foreach($types as $type){
+                        <option @selected($type->id == $project->type?->id) value="{{$type->id}}">{{$type->type}}</option>
+                    }
+                    @endforeach
+                </select>
+            </div>
     
             <div class="actions">
                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i></button>

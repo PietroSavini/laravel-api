@@ -32,7 +32,7 @@
                 <select class="form-select" name="type_id" id="type" >
                     <option value="">seleziona un linguaggio</option>
                     @foreach($types as $type){
-                        <option value="{{$type->id}}">{{$type->type}}</option>
+                        <option @selected(old('type_id') == $type->id) value="{{$type->id}}">{{$type->type}}</option>
                     }
                     @endforeach
                 </select>

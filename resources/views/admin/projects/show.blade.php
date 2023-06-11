@@ -11,6 +11,11 @@
         <div class="project-info">
             <p class="project-description  text-center">{{$project->description}}</p>
             <p class="text-start">tags: </p>
+            @if ($project->type)
+            <p class="text-start">programming language: {{$project->type?->type}}</p>
+            @else
+            <p class="text-start ">programming language: <span class="small-warning">(non definito. attribuisci un linguaggio di programmazione nella sezione "modifica progetto")</span></p>
+            @endif
         </div>
         <hr>
         <div class="actions">

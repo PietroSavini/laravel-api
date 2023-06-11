@@ -26,6 +26,17 @@
                 <label  for="description" class="d-block">descrizione:</label>
                 <textarea value="{{old('description')}}" name="description" id="description"  rows="3"></textarea>
             </div>
+
+            <div class="form-group">
+                <label for="type" >linguaggio di programmazione:</label>
+                <select class="form-select" name="type_id" id="type" >
+                    <option value="">seleziona un linguaggio</option>
+                    @foreach($types as $type){
+                        <option value="{{$type->id}}">{{$type->type}}</option>
+                    }
+                    @endforeach
+                </select>
+            </div>
     
     
             <div class="actions">

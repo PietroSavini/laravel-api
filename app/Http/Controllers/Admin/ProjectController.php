@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -27,7 +28,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $types = type::all();
+        return view('admin.projects.create',compact('types'));
     }
 
     /**
@@ -41,7 +43,8 @@ class ProjectController extends Controller
         $data = $request->validate([
             'title' => 'required|min:5|max:100',
             'slug' => 'nullable',
-            'description' => 'nullable'
+            'description' => 'nullable',
+            'type_id' => 'nullable'
         ]);
         $data['slug'] = Str::slug($data['title'], '-');
         $project = new Project();

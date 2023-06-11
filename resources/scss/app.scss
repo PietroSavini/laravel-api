@@ -139,7 +139,7 @@ img{
                 margin: 0 auto;
                 border: 1px solid #fff;
                 .small-warning{
-                    color: #FFC107;
+                    color: yellow;
                     font-size: .7rem;
                 }
             }
@@ -158,13 +158,16 @@ img{
                 flex-wrap: wrap;
                 align-items: center;
                 label{
-                    width: 20%;
+                    width: 40%;
                 }
                 input{
-                    width: 80%;
+                    width: 60%;
                 }
                 textarea{
-                    width: 80%;
+                    width: 60%;
+                }
+                .form-select{
+                    width: 60%;
                 }
                 
             }

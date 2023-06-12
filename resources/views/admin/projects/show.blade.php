@@ -14,9 +14,9 @@
                 <span>{{ $technology->name }}{{ $loop->last ? "." : "," }}</span>
             @endforeach </p>
             @if ($project->type)
-            <p class="text-start">linguaggio di programmazione: {{$project->type?->type}}</p>
+            <p class="text-start">linguaggio principale: {{$project->type?->type}}</p>
             @else
-            <p class="text-start ">linguaggio di programmazione: <span class="small-warning">(attribuisci un linguaggio di programmazione nella sezione "modifica progetto")</span></p>
+            <p class="text-start ">linguaggio principale: <span class="small-warning">(attribuisci un linguaggio di programmazione nella sezione "modifica progetto")</span></p>
             @endif
         </div>
         <hr>

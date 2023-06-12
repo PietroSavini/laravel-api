@@ -39,7 +39,8 @@
                 </select>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 technology-checkbox">
+                <h4>seleziona tags relative al progetto:</h4>
                 @foreach ($technologies as $technology)
                     <div class="form-check">
                         <label class="form-check-label" for="technology-{{ $technology->id }}">

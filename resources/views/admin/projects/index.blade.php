@@ -34,7 +34,7 @@
                     <ul class="tags">
                         <span>tags:</span>
                         @foreach ($project->technologies as $technology)
-                            <li class="tags-links">{{ $technology->name }}</li>
+                            <li class="tags-links">{{ $technology->name }}{{ $loop->last ? "" : "," }}</li>
                         @endforeach
                     </ul>
                 </div>

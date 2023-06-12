@@ -10,7 +10,9 @@
         </div>
         <div class="project-info">
             <p class="project-description  text-center">{{$project->description}}</p>
-            <p class="text-start">tags: </p>
+            <p class="text-start">tags:  @foreach ($project->technologies as $technology)
+                <span>{{ $technology->name }}{{ $loop->last ? "." : "," }}</span>
+            @endforeach </p>
             @if ($project->type)
             <p class="text-start">linguaggio di programmazione: {{$project->type?->type}}</p>
             @else

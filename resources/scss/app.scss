@@ -1,62 +1,71 @@
 @import '~bootstrap/scss/bootstrap';
 
 //admin dashboard---------------------------------------------
-img{
+img {
     max-width: 100%;
 }
 
-.dashboard{
+.dashboard {
     height: 100vh;
+
     //header
-    .navbar{
-        background-color: rgb(31, 33, 46)!important;
+    .navbar {
+        background-color: rgb(31, 33, 46) !important;
         color: #fff;
-        .logo{
-    
-            span{
+
+        .logo {
+
+            span {
                 color: red;
             }
-        } 
-        button{
+        }
+
+        button {
             color: #5f5f5f;
             border-color: #fff;
             background-color: #fff;
-            .navbar-toggler-icon{
+
+            .navbar-toggler-icon {
                 color: #fff;
-                border-color:#fff;
+                border-color: #fff;
                 background-color: #fff;
             }
         }
-        
-        .collapse a{
+
+        .collapse a {
             color: #fff;
         }
-        .dropdown-menu{
-            background-color:rgb(31, 33, 46) ;
-            
-            .dropdown-item:hover{
-                background-color:rgb(53, 53, 59);
+
+        .dropdown-menu {
+            background-color: rgb(31, 33, 46);
+
+            .dropdown-item:hover {
+                background-color: rgb(53, 53, 59);
             }
         }
     }
 
     //sidebar
-    .dashboard-content{
+    .dashboard-content {
         height: calc(100% - 60px);
-        .sidebar{
+
+        .sidebar {
             width: 150px;
             background-color: rgb(36, 37, 46);
             color: #fff;
             padding: 10px 0px;
-            .sidebar-nav{
+
+            .sidebar-nav {
                 list-style-type: none;
                 padding: 0;
                 margin: 0;
-                .sidebar-link{
+
+                .sidebar-link {
                     padding: 5px 0px 5px 10px;
                     transition: 200ms;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         background-color: #5f5f5f;
                         border-right: 3px solid #fff;
                     }
@@ -66,131 +75,174 @@ img{
 
     }
 
-    main{
+    main {
         background-color: #393749;
         flex-grow: 1;
         color: #fff;
         overflow-y: auto;
 
-        button{
+        button {
             margin: 0 auto;
         }
 
         //adminDashboard-Home
-        .ms_container{
+        .ms_container {
             width: 80%;
             margin: 0 auto;
             text-align: center;
             padding: 2rem 1rem;
-    
+
 
             //adminDashboard-projects
-            .project-link{
+            .project-link {
+                display: block;
                 text-decoration: none;
                 color: inherit;
-            }
-            .project-card{
-                height: 120px;
                 max-width: 1000px;
-                border-radius: 10px;
-                background-color:#1F212E ;
-                box-shadow: 0px 0px 20px black;
                 margin: 0 auto;
-                cursor: pointer;
-                transition: 200ms;
-                &:hover{
-                    background-color: #292b36;
-                }
 
-                .type{
-                    width: 20%;
-                    object-fit: cover;
-                    img{
-                        position: relative;
-                        left: 0;
-                        border-top-left-radius: 10px;
-                        border-bottom-left-radius: 10px;
-                        height: 100%;
-                        object-fit: cover;
+                .project-card {
+                    height: 150px;
+                    max-width: 1000px;
+                    border-radius: 10px;
+                    background-color: #1F212E;
+                    box-shadow: 0px 0px 20px black;
+
+                    cursor: pointer;
+                    transition: 200ms;
+
+                    &:hover {
+                        background-color: #292b36;
                     }
-                    
-                }
-                .details{
-                    padding: 1rem 1.5rem;
-                    width: 80%;
+
+                    .type {
+                        width: 20%;
+
+                        img {
+                            position: relative;
+                            left: 0;
+                            border-top-left-radius: 10px;
+                            border-bottom-left-radius: 10px;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                    }
+
+                    .details {
+                        padding: 1rem 1.5rem;
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        & p{
+                            color: #dbdbdb;
+                            font-size: .8rem;
+                        }
+                        .project-description{
+                            height: 80%;
+                        }
+                        .tags {
+                            margin: 0;
+                            padding: 0;
+                            height: 20%;
+                            list-style-type: none;
+                            color: #5f5f5f;
+
+                            & .tags-links {
+                                display: inline-block;
+                                transition: 200ms;
+                                cursor: pointer;
+                                &:hover{
+                                    color: #0D6EFD;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
 
         //Project-show
-        .show{
+        .show {
             background:
-            radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
-            radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px),
-            #292b36;
+                radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+                radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px),
+                #292b36;
             background-size: 20px 20px;
             height: 100%;
             padding: 2rem 0;
             display: flex;
             align-items: center;
-            .content-show{
+
+            .content-show {
                 background-color: #1F212E;
                 border-radius: 15px;
                 margin: 0 auto;
                 border: 1px solid #fff;
-                .small-warning{
+
+                .small-warning {
                     color: yellow;
                     font-size: .7rem;
                 }
             }
 
-            .actions i{
-                color:black;
+            .actions i {
+                color: black;
             }
-           
+
         }
 
         //project-edit/create
-        .edit{
-            .ms_container{
+        .edit {
+            .ms_container {
                 text-align: left;
+
                 & h3,
-                h4{
+                h4 {
                     text-align: center;
                 }
-                .form-group{
+
+                .form-group {
                     display: flex;
                     margin-bottom: 1rem;
                     flex-wrap: wrap;
                     align-items: center;
-                    label{
+
+                    label {
                         width: 40%;
                     }
-                    input{
+
+                    input {
                         width: 60%;
                     }
-                    textarea{
+
+                    textarea {
                         width: 60%;
                     }
-                    .form-select{
+
+                    .form-select {
                         width: 60%;
                     }
-                    
+
                 }
-                .actions{
+
+                .actions {
                     margin: 0 auto;
                     text-align: center;
                 }
-    
-                .technology-checkbox{
+
+                .technology-checkbox {
                     text-align: center;
-                    .form-check{
+
+                    .form-check {
                         width: 50%;
                         margin: 0 auto;
                     }
                 }
             }
         }
-        
-    }   
+
+    }
 }

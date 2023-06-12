@@ -38,6 +38,25 @@
                     @endforeach
                 </select>
             </div>
+
+            <div class="mb-3">
+                @foreach ($technologies as $technology)
+                    <div class="form-check">
+                        <label class="form-check-label" for="technology-{{ $technology->id }}">
+                            {{ $technology->name }}
+                        </label>
+                        <input 
+                            class="form-check-input" 
+                            type="checkbox" 
+                            value="{{ $technology->id }}"
+                            id="technology-{{ $technology->id }}" 
+                            name="technologies[]" 
+                            @checked(old('technologies')
+                                    ? in_array($technology->id, old('technologies', []))
+                                    : $project->technologies->contains($technology))>
+                    </div>
+                @endforeach
+            </div>
     
             <div class="actions">
                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i></button>

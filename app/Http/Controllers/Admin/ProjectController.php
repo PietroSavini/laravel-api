@@ -80,7 +80,7 @@ class ProjectController extends Controller
     {
         $technologies = technology::all();
         $types = type::all();
-        return view('admin.projects.edit', compact('project','types'));
+        return view('admin.projects.edit', compact('project','types','technologies'));
     }
 
     /**

@@ -37,7 +37,18 @@
                     @endforeach
                 </select>
             </div>
-    
+
+            <div class="mb-3 technology-checkbox">
+                <h4>seleziona tags relative al progetto:</h4>
+                @foreach ($technologies as $thechnology)
+                <div class="form-check">
+                    <label class="form-check-label" for="thechnology-{{$thechnology->id}}">
+                        {{$thechnology->name}}
+                    </label>
+                    <input class="form-check-input" type="checkbox" value="{{$thechnology->id}}" id="thechnology-{{$thechnology->id}}" name="technologies[]">
+                </div>
+                @endforeach
+            </div>
     
             <div class="actions">
                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i></button>

@@ -150,29 +150,45 @@ img{
            
         }
 
-        //project-edit
+        //project-edit/create
         .edit{
-            .form-group{
-                display: flex;
-                margin-bottom: 1rem;
-                flex-wrap: wrap;
-                align-items: center;
-                label{
-                    width: 40%;
+            .ms_container{
+                text-align: left;
+                & h3,
+                h4{
+                    text-align: center;
                 }
-                input{
-                    width: 60%;
+                .form-group{
+                    display: flex;
+                    margin-bottom: 1rem;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    label{
+                        width: 40%;
+                    }
+                    input{
+                        width: 60%;
+                    }
+                    textarea{
+                        width: 60%;
+                    }
+                    .form-select{
+                        width: 60%;
+                    }
+                    
                 }
-                textarea{
-                    width: 60%;
+                .actions{
+                    margin: 0 auto;
+                    text-align: center;
                 }
-                .form-select{
-                    width: 60%;
+    
+                .technology-checkbox{
+                    text-align: center;
+                    .form-check{
+                        width: 50%;
+                        margin: 0 auto;
+                    }
                 }
-                
-            }
-            .actions{
-                margin: 0 auto;
             }
         }
         

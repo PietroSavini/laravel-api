@@ -104,6 +104,13 @@ class ProjectController extends Controller
             'type_id' => 'nullable|exists:types,id'
         ]);
         $data['slug'] = Str::slug($data['title'], '-');
+        if($request->hasFile('image')){
+            if($project->image){
+                Storage::delete($project->image);
+            }
+            $path = Storage::disk('public')->put('img', $request->image);
+            $data['image']= $path;
+        }
         $project->update($data);
         $technologies = $request->input('technologies', []);
         if($technologies) {

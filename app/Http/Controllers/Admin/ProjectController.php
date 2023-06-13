@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\technology;
 use App\Models\type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ProjectController extends Controller
@@ -49,14 +50,18 @@ class ProjectController extends Controller
             'type_id' => 'nullable|exists:types,id'
         ]);
         $data['slug'] = Str::slug($data['title'], '-');
-        $project = new Project();
-        $project->fill($data);
+        if($request->hasFile('image')){
+            $path = Storage::disk('public')->put('img', $request->image);
+            $data['image']= $path;
+        }
+        $project = new Project($data);
         $project->save();
         $technologies=$request->input('technologies',[]);
         if($technologies){
             $project->technologies()->attach($request->technologies);
         }
         return redirect()->route('admin.projects.show', compact('project'));
+        
     }
 
     /**

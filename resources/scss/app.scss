@@ -80,6 +80,7 @@ img {
         flex-grow: 1;
         color: #fff;
         overflow-y: auto;
+        height: calc(100vh - 60px);
 
         button {
             margin: 0 auto;
@@ -171,16 +172,26 @@ img {
                 radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, black 10px, rgba(96, 16, 48, 0) 11px),
                 #292b36;
             background-size: 20px 20px;
+            padding-top: calc(2rem + 60px);
+            padding-bottom: 2rem;
             height: 100%;
-            padding: 2rem 0;
-            display: flex;
-            align-items: center;
-
             .content-show {
                 background-color: #1F212E;
                 border-radius: 15px;
+                max-width: 1000px;
                 margin: 0 auto;
                 border: 1px solid #fff;
+
+                .project-img-container{
+                    width: 80%;
+                    margin: 0 auto;
+
+                    & img{
+                        object-fit: contain;
+                        aspect-ratio: 16/9;
+                        max-height: 350px;
+                    }
+                }
 
                 .small-warning {
                     color: yellow;

@@ -6,6 +6,13 @@
     <div class="ms_container content-show">
         <div class="text-center py-3">
             <h3>{{$project->title}}</h3>
+            @if($project->image)
+                <div class="project-img-container">
+                    <img src="{{asset('storage/'. $project->image)}}" alt="">
+                </div>  
+            @else
+                <h4>image not found</h4>
+            @endif
             <hr>
         </div>
         <div class="project-info">

@@ -6,7 +6,7 @@
 
     <div class="ms_container">
         
-        <form action="{{route('admin.projects.store')}}" method="POST">
+        <form action="{{route('admin.projects.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <h3 class="mb-3">Nuovo progetto :</h3>
             
@@ -49,7 +49,13 @@
                 </div>
                 @endforeach
             </div>
-    
+            
+            <div class="mb-3">
+                <h4 class="mt-5">importa un immagine</h4>
+                <label for="image"></label>
+                <input type="file" class="form-control" name="image" id="image">
+            </div>
+
             <div class="actions">
                 <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i></button>
                 <a href="{{route('admin.projects.index')}}" class="btn btn-warning m-2"><i class="fa-solid fa-rotate-left"></i></a>

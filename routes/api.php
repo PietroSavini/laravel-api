@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('projects',[ApiController::class,'index']);
+Route::get('/projects',[ApiController::class,'index']);

@@ -18,9 +18,16 @@ class ApiController extends Controller
 
     public function show($slug){
         $project = Project::where('slug',$slug)->first();
-        return response()->json([
-            'success'=> true,
-            'results'=> $project
-        ]);
+        if($project){
+            return response()->json([
+                'success'=> true,
+                'results'=> $project
+            ]);
+        }else{
+            return response()->json([
+                'success'=> false,
+                'results'=> "il project non esiste"
+            ]);
+        }
     }
 }

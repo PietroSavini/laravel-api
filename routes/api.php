@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/projects',[ApiController::class,'index']);
+Route::get('projects/{slug}',[ApiController::class,'show']);
